@@ -19,12 +19,12 @@ describe('render contact', () => {
   it('match the text content to be Contact me', () => {
     const { getByTestId } = render(<Contact />);
   
-      expect(getByTestId('h1tag')).toHaveTextContent('Contact me');
-    });
+    expect(getByTestId('h1tag')).toHaveTextContent('Contact me');
+  });
     
-    it('match the text content to be Submit', () => {
-      const { getByTestId } = render(<Contact />);
-      
-      expect(getByTestId('buttontag')).toHaveTextContent('Submit');
-    });
+  it('match the text content to be Submit', () => {
+    const { getByTestId } = render(<Contact />);
+    
+    expect(getByTestId('buttontag')).toHaveTextContent('Submit');
+  });
 });
