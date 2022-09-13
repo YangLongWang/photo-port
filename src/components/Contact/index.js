@@ -16,14 +16,16 @@ function ContactForm() {
       if (!isValid) {
         setErrorMessage('Your email is invalid.');
       } else {
-        if (!e.target.value.length) {
-          setErrorMessage(`${e.target.name} is required.`);
-        } else {
-          setErrorMessage('');
-        }
+        setErrorMessage('');
+      } 
+    } else {
+      if (!e.target.value.length) {
+        setErrorMessage(`${e.target.name} is required.`);
+      } else {
+        setErrorMessage('');
       }
     }
-    
+
     if (!errorMessage) {
       setFormState({...formState, [e.target.name]: e.target.value })
     }
